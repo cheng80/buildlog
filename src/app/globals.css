@@ -1,0 +1,60 @@
+/* buildlog design system tokens — copied from the Claude Design project (_ds/buildlog-design-system/tokens). */
+
+@font-face{font-family:"Pretendard Variable";src:url("/fonts/PretendardVariable.woff2") format("woff2-variations"),url("/fonts/PretendardVariable.woff2") format("woff2");font-weight:45 920;font-style:normal;font-display:swap}
+
+/* colors */
+:root{
+--orange-vibrant:#ff5d00;--orange-light:#ff7430;--orange-muted:#fbe2d7;--orange-muted-dark:#371a07;
+--blue-vibrant:#376dfa;--magenta-vibrant:#f7097d;--violet-vibrant:#a839fd;
+--red-vibrant:#e30f32;--green-vibrant:#078641;--yellow-vibrant:#fca50e;
+--white:#ffffff;--gray-50:#f3f3f3;--gray-300:#c7c7c7;--gray-400:#949494;--gray-500:#747474;--gray-600:#5b5b5b;--gray-700:#373737;--gray-800:#202020;--gray-900:#171717;--gray-950:#0c0c0c;--black:#000000;
+--color-primary:#ff5d00;--color-on-primary:#ffffff;
+--color-primary-container:#fcf5f1;--color-on-primary-container:#ff5d00;
+--color-informative:#376dfa;--color-informative-container:#f3f3fc;
+--color-error:#e30f32;--color-error-container:#fcf1f0;
+--color-success:#078641;--color-success-container:#dbfce1;
+--color-warning:#fca50e;--color-on-warning:#0a0703;--color-warning-container:#fcf2e7;
+--color-background:#ffffff;
+--color-surface-1:#00000008;--color-surface-2:#ffffff;--color-surface-3:#ffffff;--color-surface-4:#c7c7c7;
+--color-inverse-surface:#202020;--color-on-inverse-surface:#f3f3f3;
+--color-disable:#0000001a;
+--color-outline-1:#0000000d;--color-outline-2:#0000001a;--color-outline-neutral:#0c0c0c;
+--color-on-view-1:#0c0c0c;--color-on-view-2:#373737cc;--color-on-view-3:#949494;--color-on-view-primary:#ff5d00;
+--color-dim:#000000b2;
+}
+[data-theme="dark"]{
+--color-primary-container:#1c1008;--color-on-primary-container:#ff7430;
+--color-informative-container:#0e142a;--color-error-container:#200d08;--color-success-container:#071309;--color-warning-container:#1a1308;
+--color-background:#0c0c0c;
+--color-surface-1:#ffffff0d;--color-surface-2:#171717;--color-surface-3:#000000;--color-surface-4:#5b5b5b;
+--color-inverse-surface:#f3f3f3;--color-on-inverse-surface:#0c0c0c;
+--color-disable:#ffffff26;
+--color-outline-1:#ffffff14;--color-outline-2:#ffffff26;--color-outline-neutral:#f3f3f3;
+--color-on-view-1:#f3f3f3;--color-on-view-2:#f3f3f3a6;--color-on-view-3:#747474;--color-on-view-primary:#ff7430;
+--color-dim:#000000cc;
+--orange-muted:#371a07;
+color-scheme:dark;
+}
+
+/* typography */
+:root{
+--font-sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+--font-title5:18px/22px var(--font-sans);--font-title6:16px/20px var(--font-sans);--font-title7:14px/18px var(--font-sans);
+--font-body1:16px/20px var(--font-sans);--font-body2:14px/18px var(--font-sans);--font-body3:13px/18px var(--font-sans);
+--font-body4:12px/16px var(--font-sans);--font-body5:11px/14px var(--font-sans);
+--font-paragraph2:18px/26px var(--font-sans);--font-paragraph3:15px/21px var(--font-sans);--font-paragraph4:14px/20px var(--font-sans);
+}
+
+/* radius, elevation, motion */
+:root{--radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;--radius-xxl:20px;--radius-full:10000px;
+--elevation-2:0 8px 24px #0000001f;
+--ease-out-quad:cubic-bezier(0.25,0.46,0.45,0.94);--duration-fast:150ms;--duration-base:250ms;}
+[data-theme="dark"]{--elevation-2:0 8px 24px #00000099;}
+@keyframes bl-spin{to{transform:rotate(360deg)}}
+
+/* base */
+*,*::before,*::after{box-sizing:border-box}
+html{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--color-background);color:var(--color-on-view-1);font:var(--font-body2);font-family:var(--font-sans)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}

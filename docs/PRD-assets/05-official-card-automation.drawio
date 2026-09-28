@@ -1,0 +1,59 @@
+<mxfile host="drawio" modified="2026-09-27T00:00:00.000Z" agent="claude-code" version="24.0.0" type="device">
+  <diagram id="automation" name="공식 카드 자동화">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="그림 5. 공식 카드 자동화 — 수집·초안은 자동, 게시는 운영자 승인 뒤에만. 상한 미설정 시 유료 생성 안 함" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1090" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src" value="&lt;b&gt;허용 소스 4개&lt;/b&gt;&lt;br&gt;GeekNews&lt;br&gt;Show HN&lt;br&gt;itch.io devlogs&lt;br&gt;Ars Technica (업계 뉴스만)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="collect" value="&lt;b&gt;하루 1회 수집&lt;/b&gt;&lt;br&gt;RSS/Atom · 공식 API&lt;br&gt;원문 날짜와 수집 날짜 구분" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="210" y="90" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="norm" value="&lt;b&gt;정규화 · 중복 제거&lt;/b&gt;&lt;br&gt;출처 ID · 정규 URL · 내용 해시&lt;br&gt;같은 사건은 한 카드로" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="380" y="90" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="draft" value="&lt;b&gt;GPT 초안&lt;/b&gt;&lt;br&gt;하루 최대 5개&lt;br&gt;한국어 요약 · 출처 URL 변경 금지&lt;br&gt;월 상한 미설정 시 실행 안 함" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="550" y="90" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="approve" value="&lt;b&gt;운영자 승인&lt;/b&gt;&lt;br&gt;수정 · 반려 · 예약&lt;br&gt;승인 뒤 수정하면 재검수" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e4fd8;strokeColor=#173fb0;fontColor=#ffffff;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="90" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="publish" value="&lt;b&gt;게시 → 피드&lt;/b&gt;&lt;br&gt;하루 최대 2개 (KST 00:00 집계)&lt;br&gt;&quot;공식&quot; 배지 · 출처 · 원문 날짜 표시" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="960" y="90" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="internal" value="&lt;b&gt;내부 소재&lt;/b&gt; (수집 없이 직접 작성)&lt;br&gt;오늘의 만들기 주제 · 이번 주 프로젝트(실제 등록 프로젝트만) · 운영자의 빌드로그 자체 개발 기록" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="340" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="src" target="collect">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="collect" target="norm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="norm" target="draft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="draft" target="approve">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="승인된 원고만" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#1e4fd8;fontSize=10;" edge="1" parent="1" source="approve" target="publish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="템플릿 초안 · 직접 작성" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#3f5aa8;dashed=1;fontColor=#3f5aa8;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="internal" target="approve">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="795" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="적합한 소재가 부족한 날은 발행하지 않아도 된다(상한은 의무가 아님). 수집·생성 실패는 단계별로 재시도하고 가짜 대체 카드를 만들지 않는다. 외부 제작자를 빌드로그 가입자·프로젝트로 자동 생성하지 않는다. 승인·게시·숨김·복원·취소는 조치 기록(종류·사유·시각·조치자·대상)을 남긴다." style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#62625b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="1090" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

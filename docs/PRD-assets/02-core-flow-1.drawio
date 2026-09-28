@@ -1,0 +1,67 @@
+<mxfile host="drawio" modified="2026-09-27T00:00:00.000Z" agent="claude-code" version="24.0.0" type="device">
+  <diagram id="core-flow-1" name="핵심 흐름 1">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="그림 2. 핵심 흐름 1 — 첫 프로토타입이 반드시 돌아가게 할 흐름과 서버가 기록하는 행동 이벤트 5개" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="&lt;b&gt;① 가입·로그인&lt;/b&gt;&lt;br&gt;GitHub · Google&lt;br&gt;표시 이름 · 핸들" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="&lt;b&gt;② 프로젝트 만들기&lt;/b&gt;&lt;br&gt;이름 · 한 줄 소개 · 기술" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="90" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="&lt;b&gt;③ 게시물 올리기&lt;/b&gt;&lt;br&gt;스크린샷 또는 유튜브 링크&lt;br&gt;+ 한 줄 (내용 하나면 게시)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="90" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="&lt;b&gt;④ 피드 + 타임라인&lt;/b&gt;&lt;br&gt;같은 글이 두 곳에&lt;br&gt;동시에 뜸" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e4fd8;strokeColor=#173fb0;fontColor=#ffffff;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="670" y="90" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="&lt;b&gt;⑤ 공개 링크 공유&lt;/b&gt;&lt;br&gt;프로젝트 페이지 URL 복사&lt;br&gt;(이름을 바꿔도 안 변함)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="90" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="s4" target="s5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev2" value="&lt;font face=&quot;Menlo, monospace&quot;&gt;project_created&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;프로젝트 저장 성공 시&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="220" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ev3" value="&lt;font face=&quot;Menlo, monospace&quot;&gt;post_published&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;처음 공개될 때 1회 (Release 포함)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="220" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ev4" value="&lt;font face=&quot;Menlo, monospace&quot;&gt;project_viewed&lt;/font&gt; · &lt;font face=&quot;Menlo, monospace&quot;&gt;project_followed&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;방문자의 열람·팔로우 (팔로우는 1차 최소 동작)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ev5" value="&lt;font face=&quot;Menlo, monospace&quot;&gt;share_clicked&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;URL 복사·공유 버튼 신호 (공유 완료 아님)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="220" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#3f5aa8;" edge="1" parent="1" source="s2" target="ev2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#3f5aa8;" edge="1" parent="1" source="s3" target="ev3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#3f5aa8;" edge="1" parent="1" source="s4" target="ev4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;strokeColor=#3f5aa8;" edge="1" parent="1" source="s5" target="ev5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="점선 = 서버가 기록하는 행동 이벤트 (Supabase 자체 events 테이블). 데모·운영자 활동은 실제 사용자 지표에서 제외, 비회원은 무작위 세션 키만, 30일 뒤 삭제.&lt;br&gt;완료 기준(KR1): 모바일·데스크톱에서 ①~⑤ 완주, 배포 후 14일 안에 운영자·데모가 아닌 실제 사용자 게시 1건 이상. 투입 시간 27시간 초과 시 범위 재협상(KR4)." style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#62625b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="1010" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

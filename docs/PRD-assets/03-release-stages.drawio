@@ -1,0 +1,40 @@
+<mxfile host="drawio" modified="2026-09-27T00:00:00.000Z" agent="claude-code" version="24.0.0" type="device">
+  <diagram id="release-stages" name="출시 단계">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="그림 3. 출시 단계 — 날짜 없음, 40일 상한, 위험이 큰 것부터. 2차·3차도 첫 버전(MVP) 범위 안" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="budget" value="총 80시간 (하루 2시간 × 최대 40일) · 핵심 흐름 1이 27시간을 넘으면 범위 재협상 → 축소 후보: 소스 4개→1개, 카드 템플릿 3종→1종, 관리자 편의 기능 (지도·결제·RSS/AI 자체는 후보 아님)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#3f5aa8;fontColor=#111111;fontSize=11;arcSize=10;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="1010" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="st1" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;1차 · 프로토타입&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;들어가는 것&lt;/b&gt;&lt;br&gt;· 핵심 흐름 1&lt;br&gt;· 행동 이벤트 5개&lt;br&gt;· 정직성 자동 검사 3개&lt;br&gt;· 공식 카드 내부 3종 · 데모 3개 · 5:1 혼합&lt;br&gt;· 과제 조건 최소: 지역 지도, Featured 테스트 결제·취소·내역·수동 시작&lt;br&gt;· 최소 프로젝트 팔로우 동작&lt;br&gt;&lt;br&gt;&lt;b&gt;끝났다고 보는 기준&lt;/b&gt;&lt;br&gt;KR1~KR5 전부 · 과제 6조건 시연 가능&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e4fd8;strokeWidth=2;fontColor=#111111;fontSize=11;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="st2" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;2차 · 발견과 반응&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;들어가는 것&lt;/b&gt;&lt;br&gt;· 프로젝트 팔로우 · 팔로잉 탭&lt;br&gt;· 좋아요 · 저장&lt;br&gt;· Release&lt;br&gt;· 본인 통계&lt;br&gt;· 연속 카드 접기&lt;br&gt;· 검색 · 태그&lt;br&gt;· 신고 · 숨김&lt;br&gt;&lt;br&gt;&lt;b&gt;끝났다고 보는 기준&lt;/b&gt;&lt;br&gt;팔로우 → 다음 글 열람 계측 가능&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dadad3;fontColor=#111111;fontSize=11;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="130" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="st3" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;3차 · 자동화 운영&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;들어가는 것&lt;/b&gt;&lt;br&gt;· RSS 수집 → GPT 초안 → 승인 → 게시 상한&lt;br&gt;· 관리자 화면&lt;br&gt;· 소스 관리&lt;br&gt;· 광고 순환 · 운영자 취소 · 결제 대사&lt;br&gt;&lt;br&gt;&lt;b&gt;끝났다고 보는 기준&lt;/b&gt;&lt;br&gt;실제 소스에서 카드 1장 발행&lt;br&gt;결제 불일치 대사 통과&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dadad3;fontColor=#111111;fontSize=11;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="130" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="st4" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;이후&lt;/b&gt; (첫 버전 밖)&lt;/font&gt;&lt;br&gt;&lt;br&gt;· 댓글 · 알림&lt;br&gt;· 팀 공동 편집&lt;br&gt;· 사람 팔로우&lt;br&gt;· 인기순&lt;br&gt;· 실결제&lt;br&gt;· 공유 이미지&lt;br&gt;· 네이티브 앱&lt;br&gt;&lt;br&gt;&lt;b&gt;기준&lt;/b&gt;&lt;br&gt;필요성 확인 후&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbfbf9;strokeColor=#dadad3;dashed=1;fontColor=#62625b;fontSize=11;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="820" y="130" width="230" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="st1" target="st2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;" edge="1" parent="1" source="st2" target="st3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#62625b;" edge="1" parent="1" source="st3" target="st4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="1차 완료에는 KR1의 배포 후 14일 실제 사용자 게시 관찰도 포함한다. 관찰 대기나 미달을 구현 성공만으로 통과 처리하지 않는다. 문서 완료를 구현·배포 승인으로 보지 않는다. [확정, 사용자 2026-09-27]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#62625b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="1010" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

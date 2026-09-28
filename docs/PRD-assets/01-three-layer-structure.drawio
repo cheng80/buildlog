@@ -1,0 +1,49 @@
+<mxfile host="drawio" modified="2026-09-27T00:00:00.000Z" agent="claude-code" version="24.0.0" type="device">
+  <diagram id="three-layer" name="3층 구조">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="583" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="그림 1. 세 층 구조 — 게시물 하나가 피드와 프로젝트 타임라인에 동시에 나타난다" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="&lt;b&gt;개발자 프로필&lt;/b&gt;&lt;br&gt;소개 · 링크 · 선택한 지역(시·군·구)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="70" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="project" value="&lt;b&gt;프로젝트&lt;/b&gt; (상시 공개 페이지)&lt;br&gt;한 계정이 관리 · 이름을 바꿔도 URL 유지" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f6f3;strokeColor=#dadad3;fontColor=#111111;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="170" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="post" value="&lt;b&gt;게시물 · Release&lt;/b&gt;&lt;br&gt;반드시 프로젝트 1개에 연결" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e4fd8;strokeColor=#173fb0;fontColor=#ffffff;fontSize=12;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="270" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="feed" value="&lt;b&gt;피드&lt;/b&gt; (최신순, 전체 / 팔로잉)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#111111;fontSize=12;verticalAlign=top;spacingTop=6;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="feedNatural" value="자연 피드: 사용자 글 5개당 공식 카드 1개&lt;br&gt;같은 프로젝트 연속 글은 최신 1장만 보이고 접기" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7edfc;strokeColor=#dadad3;fontColor=#111111;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="428" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="feedAd" value="광고 자리 1칸 — 자연 피드와 분리, &quot;광고&quot; 표시 (Featured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#62625b;dashed=1;fontColor=#33332e;fontSize=11;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="486" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline" value="&lt;b&gt;프로젝트 타임라인&lt;/b&gt;&lt;br&gt;&lt;br&gt;게시물과 Release가 시간순으로 쌓임&lt;br&gt;전체 기록 유지 (접기 없음)&lt;br&gt;페이지 링크 하나가 포트폴리오" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#111111;fontSize=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="440" y="390" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;fontColor=#62625b;fontSize=11;" edge="1" parent="1" source="profile" target="project">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#62625b;fontColor=#62625b;fontSize=11;" edge="1" parent="1" source="project" target="post">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="같은 글이" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#1e4fd8;fontSize=11;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="post" target="feed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="동시에 표시" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e4fd8;strokeWidth=1.5;fontColor=#1e4fd8;fontSize=11;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="post" target="timeline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="공식 카드(만들기 주제 · 개발 팁과 소식 · 이번 주 프로젝트)와 데모 프로젝트는 &quot;공식&quot; · &quot;데모&quot; 배지로 구분. 카드에 반응 숫자 없음." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#62625b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="552" width="740" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
